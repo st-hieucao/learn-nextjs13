@@ -25,8 +25,8 @@ const Home = async () => {
       <h2>Home page</h2>
       <Link href={'/detail'}>Detail page</Link>
       {
-        data?.length && data?.map((item: any) => (
-          <Link href={`${item._id}`}>
+        data?.length && data?.map((item: any, index: number) => (
+          <Link href={`${item._id}`} key={index}>
             <p>{ item.title }</p>
           </Link>
         ))
