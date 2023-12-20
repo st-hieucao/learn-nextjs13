@@ -5,7 +5,7 @@ const Detail = () => {
   return (
     <div>
       <h2>Detail page</h2>
-      <Link href={'/detail'}>Home page</Link>
+      <Link href={'/home'}>Home page</Link>
     </div>
   )
 }
