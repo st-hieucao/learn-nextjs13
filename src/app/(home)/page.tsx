@@ -2,7 +2,7 @@ import Link from 'next/link'
 import React from 'react'
 
 async function getData() {
-  const res = await fetch('https://boogle.onrender.com/api/posts/public?page=1')
+  const res = await fetch('https://boogle.onrender.com/api/posts/public?page=1', { cache: 'no-store' });
   // The return value is *not* serialized
   // You can return Date, Map, Set, etc.
  
