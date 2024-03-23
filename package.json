@@ -3,8 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "NODE_ENV=development next dev",
     "build": "next build",
+    "build:dev": "cp .env.development .env.local && next build",
     "start": "next start",
     "lint": "next lint"
   },

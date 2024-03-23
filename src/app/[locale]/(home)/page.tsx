@@ -15,6 +15,8 @@ export default function Page() {
   );
 
   const t = useTranslations();
+
+  console.log({data: process.env.NEXT_PUBLIC_ANALYTICS_ID})
   
   if (error) return "An error has occurred.";
   if (isLoading) return <Loading />;

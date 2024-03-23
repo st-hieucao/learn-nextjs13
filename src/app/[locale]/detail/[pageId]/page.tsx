@@ -26,6 +26,8 @@ const Detail = async (props: { params: { pageId: string }}) => {
   const post = await getData(idPost);
   const t = await getTranslations();
 
+  console.log({data: process.env.NEXT_PUBLIC_ANALYTICS_ID})
+
   if (!post) {
     return <></>
   }
