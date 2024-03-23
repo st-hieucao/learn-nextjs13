@@ -1,4 +1,5 @@
-import Link from 'next/link';
+import LanguageChanger from '@/components/LanguageChanger';
+import { Link } from '@/navigation';
 import React from 'react';
 
 // import AuthenticationModal from '../../components/Authentication/AuthenticationModal';
@@ -74,6 +75,9 @@ const Header = () => {
         <div className="header-action">
           <nav className="navigation-bar">
             <ul className="group-item menu-list">
+              <li className="list-item menu-item">
+                <LanguageChanger />
+              </li>
               <li className="list-item menu-item">
                 <a href="/" className="text-primary menu-link">
                   Home

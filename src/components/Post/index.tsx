@@ -1,6 +1,6 @@
 import React from 'react';
 import { calculateTimeSince, formatNumber } from '../../utils/index';
-import Link from 'next/link';
+import { Link } from '@/navigation';
 
 const Post = ({ post }: any) => {
   const { _id, title, comments, likes, user, cover, description, createdAt, tags } = post;
@@ -19,12 +19,22 @@ const Post = ({ post }: any) => {
     <li key={_id} className="list-item col-4 col-lg-6 col-md-12">
       <div className="card">
         <div className="card-img">
-          <Link href={`/detail/${_id}`} prefetch={true}>
+          <Link
+            href={{
+              pathname: '/detail/[pageId]',
+              params: {pageId: _id}
+            }}
+          >
             <img src={cover} alt="" className="post-image" />
           </Link>
         </div>
         <div className="card-body post-content">
-          <Link href={`/detail/${_id}`} prefetch={true}>
+          <Link
+            href={{
+              pathname: '/detail/[pageId]',
+              params: {pageId: _id}
+            }}
+          >
             <h2 className="card-title">{title}</h2>
           </Link>
           <ul className="card-tags">
@@ -36,7 +46,8 @@ const Post = ({ post }: any) => {
         </div>
         <div className="card-footer">
           <Link
-            href=''
+            href='/'
+
             // href={userCurrent?.email === user?.email ? '/wall/me' : `/wall/${user?._id}`}
             className="post-creator-info"
             // onClick={handleToWallPage}
